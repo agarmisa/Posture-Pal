@@ -13,6 +13,8 @@ feature 'user sees her daily program', %{
       program = FactoryGirl.create(:program)
       user = FactoryGirl.create(:user)
       exercise = FactoryGirl.create(:exercise)
+      program.exercises << exercise
+
       visit new_user_registration_path
 
       fill_in 'Email', with: 'john@example.com'
@@ -21,9 +23,9 @@ feature 'user sees her daily program', %{
 
       click_button 'Sign up'
       visit program_path(program)
-      save_and_open_page
       expect(page).to have_content('All About the Back')
       expect(page).to have_content('Scapular Retraction')
+      save_and_open_page
 
     end
   end

@@ -17,4 +17,15 @@ FactoryGirl.define do
     repetition '3 sets of 10'
     image 'www.scapretract.jpg'
   end
+
+  factory :exercise_schedule do
+    association :exercise
+    association :program
+  end
+
+  factory :program_with_exercise, parent: :program do
+    after_create do |program|
+      program.exercises << FactoryGirl.create(:exercise)
+    end
+  end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'homes#index'
+  root 'programs#show'
   devise_for :users
 
   resources :programs, only: [:show]

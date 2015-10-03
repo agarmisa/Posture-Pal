@@ -1,6 +1,6 @@
 <h1><%= @program.name %></h1>
 <ul>
-  <% @exercises.each do |exercise| %>
-    <li><%= exercise %></li>
+  <% @program.exercises.each do |exercise| %>
+    <li><%= exercise.name %></li>
   <% end %>
 </ul>
