@@ -15,3 +15,33 @@
  *= require foundation_and_overrides
 
  */
+
+.left-text {
+  text-align: left;
+  font-family: 'Poiret One', cursive;
+  padding-left: 50px;
+}
+
+body {
+ background-image: url('http://wallpaperpassion.com/upload/13897/yoga-wallpaper.jpg');
+ background-repeat:no-repeat;
+ background-size: 100% 100%;
+ font-family: 'Poiret One', cursive;
+ }
+
+ h1{
+   font-family: 'Poiret One', cursive;
+ }
+
+ ul {
+  list-style-type: none;
+  font-family: 'Poiret One', cursive;
+}
+
+/*.top-bar-section {
+  font-family: 'Poiret One', cursive;
+}
+
+.right {
+font-family: 'Poiret One', cursive;
+}*/

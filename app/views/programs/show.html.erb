@@ -1,6 +1,10 @@
-<h1><%= @program.name %></h1>
-<ul>
-  <% @program.exercises.each do |exercise| %>
-    <li><%= exercise.name %></li>
-  <% end %>
-</ul>
+<div class="left-text">
+  <h1><%= @program.name %></h1>
+    <% @program.exercises.each do |exercise| %>
+      <div class="exercise-list">
+        <ul>
+          <%= link_to (exercise.name), exercise_path(exercise) %>
+        </ul>
+      </div>
+   <% end %>
+</div>
