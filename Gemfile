@@ -18,6 +18,10 @@ group :development, :test do
   gem 'valid_attribute'
 end
 
+group :test do
+  gem 'coveralls', require: false
+end
+
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
