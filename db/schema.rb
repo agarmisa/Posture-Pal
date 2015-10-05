@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20151005165954) do
   end
 
   create_table "program_users", force: :cascade do |t|
-    t.integer "program_id"
-    t.integer "user_id"
+    t.integer "program_id", null: false
+    t.integer "user_id",    null: false
   end
 
   create_table "programs", force: :cascade do |t|
