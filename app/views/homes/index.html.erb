@@ -1,4 +1,7 @@
-<p>
-  Modify me in `app/views/homes/index.html.erb` or change the root directive in
-  `config/routes.rb`
-</p>
+<ul>
+  <div class="left-text">
+  <% @programs.each do |program| %>
+    <li><%= link_to program.name, program_path(program) %></li>
+    <br>
+  <% end %>
+</ul>
