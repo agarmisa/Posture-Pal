@@ -33,11 +33,27 @@ body {
    font-family: 'Poiret One', cursive;
  }
 
+ h2{
+    font-family: 'Poiret One', cursive;
+    padding: 20px;
+ }
+
  ul {
   list-style-type: none;
   font-family: 'Poiret One', cursive;
 }
 
+.field {
+  padding-bottom: 0;
+
+  em {
+    font-size: 8px;
+  }
+}
+
+.shared-links {
+  padding-left: 25px;
+}
 /*.top-bar-section {
   font-family: 'Poiret One', cursive;
 }
