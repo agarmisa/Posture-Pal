@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature 'user visits homepage', %{
   As a user
-  I want to visit the app home page
-  So that I can decide where to navigate
+  I want to visit the app homepage
+  So that I can decide where to navigate to
 } do
   # Acceptance Criteria
   # - User must be presented with options to log in, sign up, or visit program show page
@@ -13,16 +13,7 @@ feature 'user visits homepage', %{
     scenario 'user is able to see all pertinent links' do
       program = FactoryGirl.create(:program)
       user = FactoryGirl.create(:user)
-      exercise = FactoryGirl.create(:exercise)
-      program.exercises << exercise
 
-      visit new_user_registration_path
-
-      fill_in 'Email', with: 'john@example.com'
-      fill_in 'Password', with: 'password'
-      fill_in 'Password confirmation', with: 'password'
-
-      click_button 'Sign up'
       visit root_path
       expect(page).to have_content('All About the Back')
     end
