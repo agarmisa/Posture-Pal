@@ -14,8 +14,8 @@ feature 'user visits homepage', %{
     scenario 'user is able to see all pertinent links' do
     FactoryGirl.create(:program)
 
-      visit root_path
-      expect(page).to have_content('All About the Back')
+    visit root_path
+    expect(page).to have_content('All About the Back')
     end
   end
 end
