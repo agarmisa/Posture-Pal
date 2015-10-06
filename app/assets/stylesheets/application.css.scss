@@ -16,7 +16,7 @@
 
  */
 
- @import "font-awesome";
+@import "font-awesome";
 
 .left-text {
   text-align: left;
@@ -26,10 +26,10 @@
 }
 
 body {
- background-image: url('http://wallpaperpassion.com/upload/13897/yoga-wallpaper.jpg');
- background-repeat:no-repeat;
- background-size: 100% 60%;
- font-family: 'Poiret One', cursive;
+  background-image: url('http://wallpaperpassion.com/upload/13897/yoga-wallpaper.jpg');
+  background-repeat:no-repeat;
+  background-size: 100% 60%;
+  font-family: 'Poiret One', cursive;
  }
 
  h1{
@@ -65,43 +65,43 @@ body {
 }
 
 .text-center {
-  position: absolute;
   bottom: 220px;
   left: 600px;
+  position: absolute;
 }
 
 .info-box-left {
-  position: absolute;
   bottom: 150px;
   left: 100px;
+  position: absolute;
 }
 
 .info-box-center {
-  position: absolute;
   bottom: 150px;
   left: 540px;
+  position: absolute;
 }
 
 .info-box-right {
-  position: absolute;
   bottom: 150px;
   left: 1120px;
+  position: absolute;
 }
 
 .bell {
-  position: absolute;
   bottom: 50px;
   left: 180px;
+  position: absolute;
 }
 
 .book {
-  position: absolute;
   bottom: 50px;
   left: 680px;
+  position: absolute;
 }
 
 .thumbs-up {
-  position: absolute;
   bottom: 50px;
   left: 1180px;
+  position: absolute;
 }
