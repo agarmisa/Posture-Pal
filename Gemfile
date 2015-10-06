@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'pry-rails'
@@ -35,4 +36,4 @@ gem 'foundation-rails'
 
 gem 'rails_12factor', group: :production
 
-ruby "2.0.0"
+ruby "2.2.1"

@@ -15,7 +15,7 @@ feature 'user visits homepage', %{
       FactoryGirl.create(:program)
 
       visit root_path
-      expect(page).to have_content('Please sign up or log in')
+      expect(page).to_not have_content('All About the Back')
     end
   end
 

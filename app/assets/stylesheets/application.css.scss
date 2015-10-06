@@ -16,6 +16,8 @@
 
  */
 
+ @import "font-awesome";
+
 .left-text {
   text-align: left;
   font-family: 'Poiret One', cursive;
@@ -26,7 +28,7 @@
 body {
  background-image: url('http://wallpaperpassion.com/upload/13897/yoga-wallpaper.jpg');
  background-repeat:no-repeat;
- background-size: 100% 100%;
+ background-size: 100% 60%;
  font-family: 'Poiret One', cursive;
  }
 
@@ -60,4 +62,46 @@ body {
 
 .shared-links {
   padding-left: 25px;
+}
+
+.text-center {
+  position: absolute;
+  bottom: 220px;
+  left: 600px;
+}
+
+.info-box-left {
+  position: absolute;
+  bottom: 150px;
+  left: 100px;
+}
+
+.info-box-center {
+  position: absolute;
+  bottom: 150px;
+  left: 540px;
+}
+
+.info-box-right {
+  position: absolute;
+  bottom: 150px;
+  left: 1120px;
+}
+
+.bell {
+  position: absolute;
+  bottom: 50px;
+  left: 180px;
+}
+
+.book {
+  position: absolute;
+  bottom: 50px;
+  left: 680px;
+}
+
+.thumbs-up {
+  position: absolute;
+  bottom: 50px;
+  left: 1180px;
 }
