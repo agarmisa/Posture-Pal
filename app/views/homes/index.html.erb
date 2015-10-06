@@ -1,9 +1,13 @@
 <h2>Welcome to PosturePal</h2>
-<h4>Please click a program below to get started</h4>
-<ul>
-  <div class="left-text">
-  <% @programs.each do |program| %>
-    <li><%= link_to program.name, program_path(program) %></li>
-    <br>
-  <% end %>
-</ul>
+<% if current_user %>
+  <h4>Please click a program below to get started</h4>
+  <ul>
+    <div class="left-text">
+    <% @programs.each do |program| %>
+      <li><%= link_to program.name, program_path(program) %></li>
+      <br>
+    <% end %>
+  </ul>
+<% else %>
+  <h4>Please sign up or log in</h4>
+<% end %>

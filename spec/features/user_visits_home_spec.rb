@@ -11,10 +11,28 @@ feature 'user visits homepage', %{
   # - User questionably is presented with a link to an exercise index page
 
   context 'user visits home page' do
-    scenario 'user is able to see all pertinent links' do
+    scenario 'not signed in user is able to see all pertinent links' do
       FactoryGirl.create(:program)
 
       visit root_path
+      expect(page).to have_content('Please sign up or log in')
+    end
+  end
+
+  context 'user visits home page' do
+    scenario 'user is able to see all pertinent links' do
+      FactoryGirl.create(:program)
+      FactoryGirl.create(:user)
+      visit new_user_registration_path
+
+      fill_in 'Email', with: 'john@example.com'
+      fill_in 'Password', with: 'password'
+      fill_in 'Password confirmation', with: 'password'
+
+      click_button 'Sign up'
+
+      visit root_path
+
       expect(page).to have_content('All About the Back')
     end
   end
