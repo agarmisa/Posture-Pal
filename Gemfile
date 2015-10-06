@@ -33,4 +33,4 @@ gem 'foundation-rails'
 
 gem 'rails_12factor', group: :production
 
-ruby "2.2.1"
+ruby "2.0.0"
