@@ -33,7 +33,6 @@ feature 'user visits homepage', %{
 
       visit root_path
 
-
       expect(page).to have_content('All About the Back')
     end
   end
