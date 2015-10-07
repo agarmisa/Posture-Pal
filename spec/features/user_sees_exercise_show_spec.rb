@@ -10,10 +10,10 @@ feature 'user sees information about an individual exercise', %{
 
   context 'user views exercise information' do
     scenario 'user is able to see all exercise information' do
-      program = FactoryGirl.create(:program)
+      # program = FactoryGirl.create(:program)
       user = FactoryGirl.create(:user)
       exercise = FactoryGirl.create(:exercise)
-      program.exercises << exercise
+      # program.exercises << exercise
 
       visit new_user_registration_path
 
