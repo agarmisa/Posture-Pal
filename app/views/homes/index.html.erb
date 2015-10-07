@@ -3,8 +3,8 @@
   <h4>Please click a program below to get started</h4>
   <ul>
     <div class="left-text">
-    <% @programs.each do |program| %>
-      <li><%= link_to program.name, program_path(program) %></li>
+    <% @exercises.each do |exercise| %>
+      <li><%= link_to exercise.name, exercise_path(exercise) %></li>
       <br>
     <% end %>
   </ul>
@@ -15,7 +15,7 @@
 </div>
 
 <div class="bell">
-  <%= fa_icon "bell 5x" %>
+  <%= fa_icon "bell 3x" %>
 </div>
 
 <div class="info-box-center">
@@ -23,7 +23,7 @@
 </div>
 
 <div class="book">
-  <%= fa_icon "book 5x" %>
+  <%= fa_icon "book 3x" %>
 </div>
 
 <div class="info-box-right">
@@ -31,5 +31,5 @@
 </div>
 
 <div class="thumbs-up">
-  <%= fa_icon "thumbs-up 5x" %>
+  <%= fa_icon "thumbs-up 3x" %>
 </div>

@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :program_users
-  has_many :programs, through: :program_users
+  has_many :exercise_schedules
+  has_many :exercises, through: :exercise_schedules
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

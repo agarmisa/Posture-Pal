@@ -28,7 +28,7 @@
 body {
   background-image: url('http://wallpaperpassion.com/upload/13897/yoga-wallpaper.jpg');
   background-repeat:no-repeat;
-  background-size: 100% 60%;
+  background-size: 100% 100%;
   font-family: 'Poiret One', cursive;
  }
 
@@ -71,37 +71,41 @@ body {
 }
 
 .info-box-left {
-  bottom: 150px;
+  bottom: 75px;
   left: 100px;
   position: absolute;
 }
 
 .info-box-center {
-  bottom: 150px;
+  bottom: 75px;
   left: 540px;
   position: absolute;
 }
 
 .info-box-right {
-  bottom: 150px;
+  bottom: 75px;
   left: 1120px;
   position: absolute;
 }
 
 .bell {
-  bottom: 50px;
+  bottom: 10px;
   left: 180px;
   position: absolute;
 }
 
 .book {
-  bottom: 50px;
+  bottom: 10px;
   left: 680px;
   position: absolute;
 }
 
 .thumbs-up {
-  bottom: 50px;
+  bottom: 10px;
   left: 1180px;
   position: absolute;
+}
+
+.boo {
+  height: 1000px;
 }
