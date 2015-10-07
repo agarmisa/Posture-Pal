@@ -1,7 +1,7 @@
 class ExerciseSchedule < ActiveRecord::Base
   belongs_to :exercise
-  belongs_to :program
+  belongs_to :user
 
   validates :exercise, presence: true
-  validates :program, presence: true
+  validates :user, presence: true
 end

@@ -12,16 +12,16 @@ feature 'user visits homepage', %{
 
   context 'user visits home page' do
     scenario 'not signed in user is able to see all pertinent links' do
-      FactoryGirl.create(:program)
+      FactoryGirl.create(:exercise)
 
       visit root_path
-      expect(page).to_not have_content('All About the Back')
+      expect(page).to_not have_content('Scapular Retractions')
     end
   end
 
   context 'user visits home page' do
     scenario 'user is able to see all pertinent links' do
-      FactoryGirl.create(:program)
+      FactoryGirl.create(:exercise)
       FactoryGirl.create(:user)
       visit new_user_registration_path
 
@@ -33,7 +33,7 @@ feature 'user visits homepage', %{
 
       visit root_path
 
-      expect(page).to have_content('All About the Back')
+      expect(page).to have_content('Scapular Retractions')
     end
   end
 end

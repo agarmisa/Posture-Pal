@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
   def index
-    @programs = Program.all
+    @exercises = Exercise.all
   end
 end

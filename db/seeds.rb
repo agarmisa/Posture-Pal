@@ -5,10 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Program.create(name: 'All About the Back')
-Program.create(name: 'Leg Day')
-
 Exercise.create(name: 'Scapular Retractions',
                 description: 'Draw your shoulder blades back and down, as though
                 trying to squeeze a pencil between them',
@@ -44,9 +40,9 @@ Exercise.create(name: 'Long Arc Quad',
                 repetition: '2 sets of 10',
                 image: 'www.hipabduction.jpg')
 
-ExerciseSchedule.create(program_id: 1, exercise_id: 1)
-ExerciseSchedule.create(program_id: 1, exercise_id: 2)
-ExerciseSchedule.create(program_id: 1, exercise_id: 3)
-ExerciseSchedule.create(program_id: 2, exercise_id: 4)
-ExerciseSchedule.create(program_id: 2, exercise_id: 5)
-ExerciseSchedule.create(program_id: 2, exercise_id: 6)
+# ExerciseSchedule.create(program_id: 1, exercise_id: 1)
+# ExerciseSchedule.create(program_id: 1, exercise_id: 2)
+# ExerciseSchedule.create(program_id: 1, exercise_id: 3)
+# ExerciseSchedule.create(program_id: 2, exercise_id: 4)
+# ExerciseSchedule.create(program_id: 2, exercise_id: 5)
+# ExerciseSchedule.create(program_id: 2, exercise_id: 6)

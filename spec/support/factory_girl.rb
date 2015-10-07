@@ -7,9 +7,9 @@ FactoryGirl.define do
     password_confirmation 'password'
   end
 
-  factory :program do
-    name 'All About the Back'
-  end
+  # factory :program do
+  #   name 'All About the Back'
+  # end
 
   factory :exercise do
     name 'Scapular Retractions'
@@ -20,12 +20,12 @@ FactoryGirl.define do
 
   factory :exercise_schedule do
     association :exercise
-    association :program
+    association :user
   end
 
-  factory :program_with_exercise, parent: :program do
-    after_create do |program|
-      program.exercises << FactoryGirl.create(:exercise)
-    end
-  end
+  # factory :program_with_exercise, parent: :program do
+  #   after_create do |program|
+  #     program.exercises << FactoryGirl.create(:exercise)
+  #   end
+  # end
 end
