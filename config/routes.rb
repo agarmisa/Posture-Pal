@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get '/sign_out', to: 'sessions#destroy'
   root 'homes#index'
   devise_for :users
+
   resources :exercises, only: [:show]
 
+  resources :users, only: :none do
+    resources :reminders, only: [:create]
+  end
 end
