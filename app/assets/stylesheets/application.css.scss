@@ -25,10 +25,18 @@
   padding-top: 50px;
 }
 
-body {
+.picture-container {
   background-image: url('http://wallpaperpassion.com/upload/13897/yoga-wallpaper.jpg');
-  background-repeat:no-repeat;
-  background-size: 100% 100%;
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+body {
   font-family: 'Poiret One', cursive;
  }
 
@@ -64,48 +72,16 @@ body {
   padding-left: 25px;
 }
 
-.text-center {
-  bottom: 220px;
-  left: 600px;
-  position: absolute;
+.tall-box {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  // position: absolute;
 }
 
-.info-box-left {
-  bottom: 75px;
-  left: 100px;
-  position: absolute;
-}
 
-.info-box-center {
-  bottom: 75px;
-  left: 540px;
-  position: absolute;
-}
-
-.info-box-right {
-  bottom: 75px;
-  left: 1120px;
-  position: absolute;
-}
-
-.bell {
-  bottom: 10px;
-  left: 180px;
-  position: absolute;
-}
-
-.book {
-  bottom: 10px;
-  left: 680px;
-  position: absolute;
-}
-
-.thumbs-up {
-  bottom: 10px;
-  left: 1180px;
-  position: absolute;
-}
-
-.boo {
-  height: 1000px;
+.full-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+  width: 100%;
 }
