@@ -11,6 +11,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem "font-awesome-rails"
+gem "delayed_job_active_record"
+gem "daemons"
+gem "twilio-ruby"
 
 group :development, :test do
   gem 'pry-rails'
