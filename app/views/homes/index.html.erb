@@ -1,3 +1,5 @@
+<div class="picture-container">
+
 <h2>Welcome to PosturePal</h2>
 <% if current_user %>
   <h4>Please click a program below to get started</h4>
@@ -9,27 +11,18 @@
     <% end %>
   </ul>
 <% end %>
-
-<div class="info-box-left">
-  <h1> Receive alerts </h1>
 </div>
-
-<div class="bell">
-  <%= fa_icon "bell 3x" %>
-</div>
-
-<div class="info-box-center">
-     <h1> Learn the exercises  </h1>
-</div>
-
-<div class="book">
-  <%= fa_icon "book 3x" %>
-</div>
-
-<div class="info-box-right">
-     <h1> Stand tall </h1>
-</div>
-
-<div class="thumbs-up">
-  <%= fa_icon "thumbs-up 3x" %>
+<div class="row fullWidth tall-box">
+  <div class="columns small-4 text-center">
+    <h1> Receive alerts </h1>
+    <%= fa_icon "bell 3x" %>
+  </div>
+  <div class="columns small-4 text-center">
+   <h1> Learn the exercises  </h1>
+   <%= fa_icon "book 3x" %>
+  </div>
+  <div class="columns small-4 text-center">
+   <h1> Stand tall </h1>
+    <%= fa_icon "thumbs-up 3x" %>
+    </div>
 </div>

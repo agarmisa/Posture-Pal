@@ -17,6 +17,6 @@ class Reminder < ActiveRecord::Base
     puts message.to
   end
 
-  handle_asynchronously :remind, run_at: Proc.new { 1.minutes.from_now }
+  # handle_asynchronously :remind, :run_at => Proc.new { 1.minutes.from_now }
 
 end
