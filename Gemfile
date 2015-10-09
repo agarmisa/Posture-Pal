@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.2.1"
 
 gem 'rails', '4.2.4'
 gem 'pg'
@@ -11,8 +12,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem "font-awesome-rails"
-gem "delayed_job_active_record"
-gem "daemons"
 gem "twilio-ruby"
 
 group :development, :test do
@@ -38,5 +37,3 @@ gem 'devise'
 gem 'foundation-rails'
 
 gem 'rails_12factor', group: :production
-
-ruby "2.2.1"
