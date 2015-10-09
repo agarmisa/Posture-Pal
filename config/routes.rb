@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :exercises, only: [:show]
 
-  resources :users, only: :none do
+  resources :users, only: :show do
     resources :reminders, only: [:create]
   end
 end
