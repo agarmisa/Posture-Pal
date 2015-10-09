@@ -14,7 +14,3 @@ class Reminder < ActiveRecord::Base
     puts message.to
   end
 end
-
-if exercise == chin tucks
-  reminder =
-elsif exercise ==
