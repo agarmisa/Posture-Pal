@@ -10,7 +10,7 @@ class CheckinsController < ApplicationController
     end
   end
 
-protected
+  protected
 
   def pre_checkin
     @user = User.find(params[:user_id])
