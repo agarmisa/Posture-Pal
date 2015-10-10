@@ -12,14 +12,8 @@ feature 'user sees information about herself', %{
   context 'user views personal information' do
     scenario 'user is able to see all personal information' do
       user = FactoryGirl.create(:user)
+      sign_in(user)
 
-      visit new_user_registration_path
-
-      fill_in 'Email', with: 'john@example.com'
-      fill_in 'Password', with: 'password'
-      fill_in 'Password confirmation', with: 'password'
-
-      click_button 'Sign up'
       visit user_path(user)
       expect(page).to have_content('keep it up!')
     end

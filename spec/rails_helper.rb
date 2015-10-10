@@ -9,6 +9,7 @@ require 'shoulda-matchers'
 require File.join(File.dirname(__FILE__), 'support/valid_attribute')
 require File.join(File.dirname(__FILE__), 'support/factory_girl')
 require File.join(File.dirname(__FILE__), 'support/omni_auth_test_helper')
+require File.join(File.dirname(__FILE__), 'support/authentication_helper')
 require 'capybara/rspec'
 
 ActiveRecord::Migration.maintain_test_schema!
@@ -26,4 +27,5 @@ RSpec.configure do |config|
   end
   OmniAuth.config.test_mode = true
   config.include OmniAuthTestHelper
+  config.include AuthenticationHelper
 end
