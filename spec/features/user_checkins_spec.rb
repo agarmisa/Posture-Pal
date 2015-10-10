@@ -1,4 +1,4 @@
-# require 'rails-helper'
+# require 'rails_helper'
 #
 # feature 'users reports she did her exercises on a particular day', %{
 #   As a users
@@ -11,7 +11,12 @@
 #   context 'user clicks exercise button' do
 #     scenario 'user correctly clicks exercise button' do
 #       user = FactoryGirl.create(:user)
+#       sign_in(user)
+#       visit user_path(user)
 #
-#       visit new_user_registration_path
+#       click_on 'I kicked booty'
 #
-#       fill_in
+#       expect(page).to have_content('Great job!')
+#     end
+#   end
+# end

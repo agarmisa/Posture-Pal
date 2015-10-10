@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   has_many :exercise_schedules
   has_many :exercises, through: :exercise_schedules
   has_many :reminders
+  has_many :checkins
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
