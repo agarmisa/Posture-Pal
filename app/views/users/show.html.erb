@@ -4,3 +4,15 @@
     <h1><%= @user.name %>, keep it up! </h1>
   </div>
 </div>
+
+<div class="columns small-6 right">
+  <% if current_user %>
+    Checkins:
+    <span class= 'checkin-total'>
+      <% @user.checkins.each do |checkin| %>
+        <%= checkin.checkin %>
+      <% end %>
+    </span>
+    <br>
+    <%= link_to 'I kicked booty', user_checkins_path(@user), class: 'checkin' %>
+  <% end %>
