@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   resources :users, only: :show do
     resources :reminders, only: [:create]
   end
+
+  resources :users, only: :show do
+    resources :checkins, only: [:create]
+  end
 end

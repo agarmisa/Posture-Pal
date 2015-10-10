@@ -21,17 +21,9 @@ feature 'user visits homepage', %{
 
   context 'user visits home page' do
     scenario 'user is able to see all pertinent links' do
-      FactoryGirl.create(:exercise)
-      FactoryGirl.create(:user)
-      visit new_user_registration_path
-
-      fill_in 'Email', with: 'john@example.com'
-      fill_in 'Password', with: 'password'
-      fill_in 'Password confirmation', with: 'password'
-
-      click_button 'Sign up'
-
-      visit root_path
+      exercise = FactoryGirl.create(:exercise)
+      user = FactoryGirl.create(:user)
+      sign_in(user)
 
       expect(page).to have_content('Scapular Retractions')
     end

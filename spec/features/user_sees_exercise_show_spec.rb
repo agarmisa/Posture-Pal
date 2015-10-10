@@ -13,13 +13,7 @@ feature 'user sees information about an individual exercise', %{
       user = FactoryGirl.create(:user)
       exercise = FactoryGirl.create(:exercise)
 
-      visit new_user_registration_path
-
-      fill_in 'Email', with: 'john@example.com'
-      fill_in 'Password', with: 'password'
-      fill_in 'Password confirmation', with: 'password'
-
-      click_button 'Sign up'
+      sign_in(user)
       visit exercise_path(exercise)
       expect(page).to have_content('Scapular Retraction')
     end
