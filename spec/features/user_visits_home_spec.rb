@@ -21,7 +21,7 @@ feature 'user visits homepage', %{
 
   context 'user visits home page' do
     scenario 'user is able to see all pertinent links' do
-      exercise = FactoryGirl.create(:exercise)
+      FactoryGirl.create(:exercise)
       user = FactoryGirl.create(:user)
       sign_in(user)
 
