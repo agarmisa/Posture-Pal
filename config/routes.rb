@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :exercises, only: [:show]
 
   resources :users, only: :show do
-    resources :reminders, only: [:create]
+    resources :reminders, only: [:create] do
+      resources :exercises, only: [:show]
+    end
   end
 
   resources :users, only: :show do
