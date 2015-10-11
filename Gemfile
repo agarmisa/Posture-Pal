@@ -13,7 +13,6 @@ gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem "font-awesome-rails"
 gem "twilio-ruby"
-gem "simple_calendar", "~> 2.0"
 
 group :development, :test do
   gem 'pry-rails'
