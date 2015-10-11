@@ -17,21 +17,4 @@ namespace :twilio do
       reminder.remind(Exercise.third)
     end
   end
-
-
-
-
-
-
-
-
-
-  task :send_reminders => :environment do
-    User.send_reminder
-  end
-  task :send_reminders => :environment do
-    User.send_reminder
-  end
-
-
 end
