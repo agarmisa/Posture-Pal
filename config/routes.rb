@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
 
-  resources :exercises, only: [:show]
+  # resources :exercises, only: [:show]
 
   resources :users, only: :show do
     resources :reminders, only: [:create] do
