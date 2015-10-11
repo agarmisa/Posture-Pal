@@ -7,12 +7,12 @@
 
 <div class="columns small-6 right">
   <% if current_user %>
-    Checkins:
+    Did you sit up straight today?:
+    <br>
+    <%= link_to 'Yes, I kicked booty', user_checkins_path(@user), class: 'checkin' %>
     <span class= 'checkin-total'>
       <% @user.checkins.each do |checkin| %>
-        <%= checkin.checkin %>
+        <%= checkin.checkin %> days total
       <% end %>
     </span>
-    <br>
-    <%= link_to 'I kicked booty', user_checkins_path(@user), class: 'checkin' %>
   <% end %>
