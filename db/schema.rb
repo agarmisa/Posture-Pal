@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010150811) do
+ActiveRecord::Schema.define(version: 20151012181704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "checkins", force: :cascade do |t|
-    t.integer "checkin"
-    t.integer "user_id", null: false
+    t.integer "checkin", default: 0
+    t.integer "user_id",             null: false
   end
 
   create_table "exercise_schedules", force: :cascade do |t|
