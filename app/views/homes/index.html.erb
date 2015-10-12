@@ -9,6 +9,13 @@
       <div class="columns small-4 text-center">
         <h1> Receive alerts </h1>
         <%= fa_icon "bell 3x" %>
+        <br>
+        <br>
+        <% if current_user %>
+          <% if @user.phone == nil %>
+            <%= render partial: 'form', object: @user %>
+          <% end %>
+        <% end %>
       </div>
 
     <div class="columns small-4 text-center">
