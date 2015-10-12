@@ -7,9 +7,8 @@ feature 'user visits homepage', %{
 } do
   # Acceptance Criteria
   # - User must be presented with options to log in or sign up
-  # - User must be presented with option to visit program show page
-  # - If user is logged in, she will be presented with an index of exercises
-  # - If user, has not added phone number, user is presented with a form to do so
+  # - If user is logged in, she will be presented with links to exercises
+  # - User has an add phone form, if she has not yet added one
 
   context 'user visits home page' do
     scenario 'not signed in user is able to see all pertinent links' do
@@ -31,7 +30,7 @@ feature 'user visits homepage', %{
   end
 
   context 'user visits home page' do
-    scenario 'logged-in user is able to see add a phone number form, if one has not been added' do
+    scenario 'logged-in user sees phone form, if one has not been added' do
       user = FactoryGirl.create(:user)
       sign_in(user)
 
@@ -40,7 +39,7 @@ feature 'user visits homepage', %{
   end
 
   context 'user visits home page' do
-    scenario 'logged-in user does not see phone form, if a number has been added' do
+    scenario 'logged-in user does not see phone form, if number was added' do
       user = FactoryGirl.create(:user)
       user.phone = "+18477777777"
       user.save
