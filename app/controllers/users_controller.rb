@@ -16,13 +16,3 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 end
-
-
-# def update
-#   @user = User.find(params[:id])
-#   @user.role = "admin"
-#   if @user.save
-#     flash[:notice] = "User Updated"
-#   end
-#   redirect_to users_path
-# end
