@@ -2,7 +2,6 @@ class Reminder < ActiveRecord::Base
   belongs_to :user
   validates :user, presence: true
 
-
   def remind(exercise)
     @twilio_number = ENV['TWILIO_NUMBER']
     @client = Twilio::REST::Client.new ENV['TWILIO_ACCOUNT_SID'], ENV['TWILIO_AUTH_TOKEN']
