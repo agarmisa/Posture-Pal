@@ -14,6 +14,6 @@ class CheckinsController < ApplicationController
 
   def pre_checkin
     @user = User.find(params[:user_id])
-    @value = Checkin.find_or_initialize_by(user: current_user)
+    @value = Checkin.where(user: current_user).first_or_initialize
   end
 end
