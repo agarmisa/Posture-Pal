@@ -1,28 +1,33 @@
 <div class="picture-container">
-
-<h2>Welcome to PosturePal</h2>
-<% if current_user %>
-  <h4>Please click a program below to get started</h4>
-  <ul>
-    <div class="left-text">
-    <% @exercises.each do |exercise| %>
-      <li><%= link_to exercise.name, exercise_path(exercise) %></li>
-      <br>
+  <div class="row full-width left-text intro-page">
+  <h2>Welcome to PosturePal</h2>
+    <% if current_user %>
+      <h4><%= link_to 'Go to my page', user_path(@user) %></h4>
     <% end %>
-  </ul>
-<% end %>
-</div>
-<div class="row full-width tall-box">
-  <div class="columns small-4 text-center">
-    <h1> Receive alerts </h1>
-    <%= fa_icon "bell 3x" %>
   </div>
-  <div class="columns small-4 text-center">
-   <h1> Learn the exercises  </h1>
-   <%= fa_icon "book 3x" %>
-  </div>
-  <div class="columns small-4 text-center">
-   <h1> Stand tall </h1>
-    <%= fa_icon "thumbs-up 3x" %>
+    <div class="row full-width tall-box">
+      <div class="columns small-4 text-center">
+        <h1> Receive alerts </h1>
+        <%= fa_icon "bell 3x" %>
+      </div>
+
+    <div class="columns small-4 text-center">
+     <h1> Learn the exercises  </h1>
+     <%= fa_icon "book 3x" %>
+     <br>
+     <br>
+     <% if current_user %>
+       <ul>
+       <% @exercises.each do |exercise| %>
+         <li><%= link_to exercise.name, exercise_path(exercise) %></li>
+       <% end %>
+        </ul>
+     <% end %>
     </div>
+
+    <div class="columns small-4 text-center">
+     <h1> Stand tall </h1>
+      <%= fa_icon "thumbs-up 3x" %>
+    </div>
+  </div>
 </div>
