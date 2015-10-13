@@ -34,7 +34,7 @@ feature 'user visits homepage', %{
       user = FactoryGirl.create(:user)
       sign_in(user)
 
-      expect(page).to have_content('Add your number, to start receiving texts')
+      expect(page).to have_content('Add your number to start receiving texts')
     end
   end
 
