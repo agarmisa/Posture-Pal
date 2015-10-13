@@ -6,13 +6,13 @@ Rails.application.routes.draw do
 
   resources :exercises, only: [:show]
 
-  resources :users, only: :show do
+  resources :users, only: [:index, :show, :edit, :update, :destroy] do
     resources :reminders, only: [:create] do
       resources :exercises, only: [:show]
     end
   end
 
-  resources :users, only: [:show, :edit, :update] do
+  resources :users, only: [:index, :show, :edit, :update, :destroy] do
     resources :checkins, only: [:create]
   end
 end

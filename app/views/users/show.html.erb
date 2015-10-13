@@ -16,3 +16,12 @@
       <% end %>
     </span>
   <% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<% if current_user.admin? %>
+    <%= link_to 'All Users', users_path %>
+<% end %>

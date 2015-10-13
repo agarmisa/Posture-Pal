@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+  before_action :authorize_user, except: [:show]
+
+  def index
+    @admins = User.where(role: "admin")
+    @members = User.where(role: "member")
+  end
+
   def show
     @user = User.find(params[:id])
   end
@@ -14,5 +21,29 @@ class UsersController < ApplicationController
       flash[:notice] = "Phone number added"
     end
     redirect_to root_path
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.role = "admin"
+    if @user.save
+      flash[:notice] = "User Updated"
+    end
+    redirect_to users_path
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:notice] = "User deleted."
+    redirect_to users_path
+  end
+
+  protected
+
+  def authorize_user
+    if !current_user || !current_user.admin?
+      raise ActionController::RoutingError.new("Not Found")
+    end
   end
 end
