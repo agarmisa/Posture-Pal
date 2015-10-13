@@ -3,14 +3,13 @@ require 'rails_helper'
 feature 'admin visits users index', %{
   As an admin
   I want to visit the users index
-  So that I can see and modify all users
+  So that I can see and delete all users
 } do
 
   # Acceptance Criteria:
   # * Admin must see list of all users
   # * Visitor must not see the page
   # * Admin can delete users
-  # * Admin can change 'member' to 'admin'
 
   scenario 'admin visits users index' do
     user1 = FactoryGirl.create(:user, role: 'admin')
@@ -21,7 +20,6 @@ feature 'admin visits users index', %{
     expect(page).to have_content(user1.name)
     expect(page).to have_content(user2.name)
     expect(page).to have_content("Delete This User")
-    expect(page).to have_content("Make Admin")
   end
 
   scenario 'member fails to visit users index' do
@@ -44,24 +42,5 @@ feature 'admin visits users index', %{
     end
 
     expect(page).to_not have_content(user1.email)
-  end
-
-  scenario 'admin makes another user an admin' do
-    user1 = FactoryGirl.create(:user, name: 'bob')
-    user2 = FactoryGirl.create(:user, role: 'admin')
-
-    sign_in(user2)
-    visit users_path
-
-    expect(page).to have_content(user1.name)
-    expect(page).to have_content(user2.name)
-
-    within (".member-list") do
-      click_link "Make Admin"
-    end
-
-    within (".admin-list") do
-      expect(page).to have_content(user1.name)
-    end
   end
 end
