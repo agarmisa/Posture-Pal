@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize_user, except: [:show]
+  before_action :authorize_user, except: [:show, :update]
 
   def index
     @admins = User.where(role: "admin")
@@ -21,15 +21,6 @@ class UsersController < ApplicationController
       flash[:notice] = "Phone number added"
     end
     redirect_to root_path
-  end
-
-  def update
-    @user = User.find(params[:id])
-    @user.role = "admin"
-    if @user.save
-      flash[:notice] = "User Updated"
-    end
-    redirect_to users_path
   end
 
   def destroy
