@@ -17,8 +17,9 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.phone = params[:user][:phone]
+    @user.name = params[:user][:name]
     if @user.save
-      flash[:notice] = "Phone number added"
+      flash[:notice] = "Phone number and name added"
     end
     redirect_to root_path
   end

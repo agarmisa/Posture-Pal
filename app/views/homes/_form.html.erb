@@ -1,7 +1,11 @@
 <div class="container">
   <%= form_for @user do |f| %>
-        <%= f.label :phone, "Add your number, to start receiving texts" %>
+        <%= f.label :phone, "Add your number to start receiving texts" %>
         <%= f.text_field :phone, class: "text-field" %>
+
+        <%= f.label :name, "We'd love to put your name to your number" %>
+        <%= f.text_field :name, class: "text-field" %>
+
         <%= f.submit "Submit", class: "submit-form" %>
   <% end %>
 </div>
