@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_merit
+
   has_many :exercise_schedules
   has_many :exercises, through: :exercise_schedules
   has_many :reminders

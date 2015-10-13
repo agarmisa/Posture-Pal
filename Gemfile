@@ -13,6 +13,7 @@ gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem "font-awesome-rails"
 gem "twilio-ruby"
+gem 'merit'
 
 group :development, :test do
   gem 'pry-rails'
