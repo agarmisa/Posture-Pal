@@ -2,10 +2,11 @@ class CheckinsController < ApplicationController
   before_action :pre_checkin
 
   def create
-    @value.checkin += 1
+    @value.count += 1
     respond_to do |format|
       @value.save
-      @checkin_total = @user.checkins.sum(:checkin)
+      @checkin_total = @user.checkins.sum(:count)
+      @checkin = @value
       format.json { render json: @checkin_total }
     end
   end

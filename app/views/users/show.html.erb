@@ -12,13 +12,19 @@
     <%= link_to 'Yes, I kicked booty', user_checkins_path(@user), class: 'checkin' %>
     <span class= 'checkin-total'>
       <% @user.checkins.each do |checkin| %>
-        <%= checkin.checkin %> days total
+        <%= checkin.count %> days total
       <% end %>
     </span>
   <% end %>
+</div>
 <br>
 <br>
 <br>
+<ul>
+  <% current_user.badges.each do |badge| %>
+    <li><%= badge.name %></li>
+  <% end %>
+</ul>
 <br>
 <br>
 <br>
