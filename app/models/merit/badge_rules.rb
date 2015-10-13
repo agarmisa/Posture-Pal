@@ -35,6 +35,10 @@ module Merit
         checkin.count >= 5
       end
 
+      grant_on 'checkins#create', badge_id: 2, to: :user do |checkin|
+        checkin.count >= 10
+      end
+
       # Changes his name by one wider than 4 chars (arbitrary ruby code case)
       # grant_on 'registrations#update', badge: 'autobiographer',
       #   temporary: true, model_name: 'User' do |user|

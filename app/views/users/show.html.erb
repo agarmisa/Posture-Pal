@@ -20,16 +20,17 @@
 <br>
 <br>
 <br>
-<ul>
   <div class="row">
-  <% current_user.badges.each do |badge| %>
-    <li><%= badge.name %></li>
-  <% end %>
+    <% current_user.badges.each do |badge| %>
+    <%= image_tag (badge.custom_fields[:image]) %>
+    <% end %>
 </div>
 </ul>
 <br>
 <br>
 <br>
+<div class="row">
 <% if current_user.admin? %>
     <%= link_to 'All Users', users_path %>
 <% end %>
+</div>
