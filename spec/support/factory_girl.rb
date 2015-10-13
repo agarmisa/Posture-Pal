@@ -5,11 +5,8 @@ FactoryGirl.define do
     sequence(:email) {|n| "user#{n}@example.com" }
     password 'password'
     password_confirmation 'password'
+    role 'member'
   end
-
-  # factory :program do
-  #   name 'All About the Back'
-  # end
 
   factory :exercise do
     name 'Scapular Retractions'
@@ -22,10 +19,4 @@ FactoryGirl.define do
     association :exercise
     association :user
   end
-
-  # factory :program_with_exercise, parent: :program do
-  #   after_create do |program|
-  #     program.exercises << FactoryGirl.create(:exercise)
-  #   end
-  # end
 end
