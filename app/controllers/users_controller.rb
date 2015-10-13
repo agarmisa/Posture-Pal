@@ -15,7 +15,6 @@ class UsersController < ApplicationController
   end
 
   def update
-    binding.pry
     @user = User.find(params[:id])
     @user.phone = params[:user][:phone]
     @user.name = params[:user][:name]
