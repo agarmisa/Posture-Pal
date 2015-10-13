@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user.phone = params[:user][:phone]
     @user.name = params[:user][:name]
     if @user.save
-      Reminder.create!(user: @user)
+      Reminder.create(user: @user)
       flash[:notice] = "Phone number and name added"
     end
     redirect_to root_path
