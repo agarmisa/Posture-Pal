@@ -4,6 +4,6 @@ class ChangeColumnNameCheckins < ActiveRecord::Migration
   end
 
   def down
-    rename_column :checkins, :count, :checkin 
+    rename_column :checkins, :count, :checkin
   end
 end
