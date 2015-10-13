@@ -21,9 +21,11 @@
 <br>
 <br>
 <ul>
+  <div class="row">
   <% current_user.badges.each do |badge| %>
     <li><%= badge.name %></li>
   <% end %>
+</div>
 </ul>
 <br>
 <br>
