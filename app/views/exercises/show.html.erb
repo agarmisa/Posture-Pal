@@ -1,16 +1,17 @@
 
 <% if current_user %>
-<div class="row">
-  <div class="columns small-8 text-center">
-  <div class="left-text exercise-header">
-    <h1><%= @exercise.name %></h1>
-    <ul>
-      <li><%= @exercise.description %></li>
-      <li><%= @exercise.repetition %></li>
-      <li><%= image_tag(@exercise.image) %></li>
+  <div class="row exercise">
+    <div class="columns small-6 text-center">
+      <h1><%= @exercise.name %></h1>
+      <ul>
+        <li><%= @exercise.description %></li>
+        <li><%= @exercise.repetition %></li>
     </ul>
+    </div>
+    <div class="columns small-6 text-center">
+      <%= image_tag(@exercise.image) %>
+    </div>
   </div>
-</div>
 <% else %>
   <% flash[:notice] = "Please log in to view content" %>
 <% end %>
