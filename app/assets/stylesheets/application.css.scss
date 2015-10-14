@@ -35,14 +35,28 @@
   height: 100vh;
   position: relative;
 }
+ // h1{
+ //   font-family: 'Poiret One', cursive;
+ // }
 
+.trophy-case-container {
+  background-image: url('http://urlm.co/blog/wp-content/uploads/ipad23.jpg');
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: white;
+}
+.text-white {
+  color: white;
+}
 body {
   font-family: 'Poiret One', cursive;
  }
 
- h1{
-   font-family: 'Poiret One', cursive;
- }
 
  h2{
     font-family: 'Poiret One', cursive;
