@@ -1,9 +1,9 @@
 <div class="yoga-container">
   <div class="row">
     <div class="columns small-12 text-center">
-      <h1 class="text-white"><%= @user.name %>, keep it up! </h1>
+      <h1 class="text-black"><%= @user.name %>, keep it up! </h1>
       <% if current_user %>
-        <h3 class="text-white">Did you sit up straight today?:</h3>
+        <h3 class="text-black">Did you sit up straight today?:</h3>
         <h3><%= link_to 'Yes, I kicked booty', user_checkins_path(@user), class: 'checkin' %>
         <span class= 'checkin-total'>
           <% @user.checkins.each do |checkin| %>
