@@ -36,8 +36,8 @@
   position: relative;
 }
 
-.trophy-case-container {
-  background-image: url('http://urlm.co/blog/wp-content/uploads/ipad23.jpg');
+.yoga-container {
+  background-image: url('http://media.yogajournal.com/wp-content/uploads/245_hp_163.jpg');
   background-position: center center;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -49,8 +49,12 @@
 }
 
 .text-white {
-  color: #ffffff;
+  color: black;
 
+}
+
+.star {
+  padding-top: 400px;
 }
 
 .trophy {
@@ -58,7 +62,7 @@
 }
 
 .checkin-total {
-  color: #ffffff;
+  color: black;
 }
 
 body {

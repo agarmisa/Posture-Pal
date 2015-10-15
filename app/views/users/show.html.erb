@@ -1,4 +1,4 @@
-<div class="trophy-case-container">
+<div class="yoga-container">
   <div class="row">
     <div class="columns small-12 text-center">
       <h1 class="text-white"><%= @user.name %>, keep it up! </h1>
@@ -13,10 +13,13 @@
       <% end %>
     </div>
   </div>
-    <div class="row trophy">
+
+  <div class="row star">
+    <div class="columns small-12 text-center">
+    <h2>Keep logging your exercise days to earn more stars</h2>
       <% current_user.badges.each do |badge| %>
       <%= image_tag (badge.custom_fields[:image]) %>
       <% end %>
+    </div>
   </div>
-  </ul>
 </div>
