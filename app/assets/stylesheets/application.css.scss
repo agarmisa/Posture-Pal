@@ -48,6 +48,19 @@
   position: relative;
 }
 
+.admin-photo-container {
+  background-image: url('http://www.ekhartyoga.com/media/imagick/faith-hunter-in-reversed-warrior-pose-on-ekhartyoga-com.jpg');
+  background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  border-top: 1px;
+  border-color: black;
+}
+
 .star {
   padding-top: 400px;
 }
