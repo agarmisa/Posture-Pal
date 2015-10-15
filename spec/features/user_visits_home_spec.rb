@@ -15,7 +15,8 @@ feature 'user visits homepage', %{
       FactoryGirl.create(:exercise)
 
       visit root_path
-      expect(page).to_not have_content('Scapular Retractions')
+      expect(page).to have_content('Scapular Retractions')
+      expect(page).to_not have_content('My Page')
     end
   end
 
@@ -26,6 +27,8 @@ feature 'user visits homepage', %{
       sign_in(user)
 
       expect(page).to have_content('Scapular Retractions')
+      expect(page).to have_content('My Page')
+      expect(page).to have_content('Sign Out')
     end
   end
 
