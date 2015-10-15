@@ -1,8 +1,5 @@
 <div class="picture-container">
   <h2>Welcome to PosturePal</h2>
-    <% if current_user %>
-      <h4><%= link_to 'Go to my page', user_path(@user) %></h4>
-    <% end %>
 </div>
 <div class="row full-width left-text intro-page">
     <div class="row full-width tall-box">
@@ -23,12 +20,10 @@
      <%= fa_icon "book 3x" %>
      <br>
      <br>
-     <% if current_user %>
-       <ul>
        <% @exercises.each do |exercise| %>
+       <ul>
          <li><%= link_to exercise.name, exercise_path(exercise) %></li>
-       <% end %>
-        </ul>
+       </ul>
      <% end %>
     </div>
 
