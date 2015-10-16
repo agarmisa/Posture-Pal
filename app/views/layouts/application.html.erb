@@ -17,6 +17,16 @@
 
     <section class="top-bar-section">
       <ul class="right">
+
+        <li class="has-dropdown">
+          <a href="#">Exercises</a>
+          <ul class="dropdown">
+            <li><%= link_to 'Scapular Retractions', exercise_path(Exercise.first) %></li>
+            <li><%= link_to 'Cervical Retractions', exercise_path(Exercise.second) %></li>
+            <li><%= link_to 'TA Contraction', exercise_path(Exercise.third) %></li>
+          </ul>
+        </li>
+
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <li><%= link_to 'My Page', user_path(current_user) %></li>
@@ -31,6 +41,7 @@
       </ul>
     </section>
   </nav>
+
 
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
