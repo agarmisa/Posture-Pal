@@ -272,6 +272,7 @@ $oil         : #333333;
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
 // $anchor-font-color: $primary-color;
+$anchor-font-color: $oil;
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -466,6 +467,7 @@ $oil         : #333333;
 // $button-border-width: 0;
 // $button-border-style: solid;
 // $button-bg-color: $primary-color;
+$button-bg-color: $oil;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);

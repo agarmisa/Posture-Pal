@@ -15,7 +15,7 @@ feature 'user visits homepage', %{
       FactoryGirl.create(:exercise)
 
       visit root_path
-      expect(page).to have_content('Scapular Retractions')
+      expect(page).to_not have_content('Scapular Retractions')
       expect(page).to_not have_content('My Page')
     end
   end
@@ -35,6 +35,7 @@ feature 'user visits homepage', %{
   context 'user visits home page' do
     scenario 'logged-in user sees phone form, if one has not been added' do
       user = FactoryGirl.create(:user)
+      FactoryGirl.create(:exercise)
       sign_in(user)
 
       expect(page).to have_content('Add your number to start receiving texts')
@@ -43,6 +44,7 @@ feature 'user visits homepage', %{
 
   context 'user visits home page' do
     scenario 'logged-in user does not see phone form, if number was added' do
+      FactoryGirl.create(:exercise)
       user = FactoryGirl.create(:user)
       user.phone = "+18477777777"
       user.save

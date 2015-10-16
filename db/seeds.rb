@@ -13,4 +13,4 @@ Exercise.create(name: 'Transversus Abdominus (TA) Contraction',
                 description: 'Draw your belly button in toward your spine, keep
                 breathing, count to 5',
                 repetition: '1 set of 15',
-                image: 'http://www.massageandbodywork.com/Articles/AprilMay2005/images/hsFig7.jpg')
+                image: 'http://dreambodyidaho.com/Admin/wp-content/uploads/2012/08/core-muscles1.jpg')

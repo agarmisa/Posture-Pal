@@ -18,13 +18,6 @@
     <div class="columns small-4 text-center">
      <h1> Learn the exercises  </h1>
      <%= fa_icon "book 3x" %>
-     <br>
-     <br>
-       <% @exercises.each do |exercise| %>
-       <ul>
-         <li><%= link_to exercise.name, exercise_path(exercise) %></li>
-       </ul>
-     <% end %>
     </div>
 
     <div class="columns small-4 text-center">
@@ -35,6 +28,7 @@
 </div>
 
 <div class="row story text-center">
+  <div class="columns small-12 text-center">
   <h3>The PosturePal Story</h3>
     <p> Hello there! Welcome to PosturePal. PosturePal was started by me, a physical therapist. I found that most of my patients coming to see me for neck and back pain, sat most of the day and generally had poor posture. It is so difficult to remember to practice good posture throughout the day, and I came up with PosturePal to take the thinking out of the equation. Sign up with your name and phone number and you will receive texts 3 times a day with a link to an exercise. The exercises are simple and can be performed while sitting at your desk without drawing attention to yourself. Come on, I dare you to. You'll be a pro in no time.
     </p>
@@ -42,4 +36,5 @@
     <div class="cursive">
       <i>Ali Garmisa</i>
     </div>
+  </div>
 </div>
