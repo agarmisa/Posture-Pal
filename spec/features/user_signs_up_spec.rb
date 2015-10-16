@@ -27,7 +27,7 @@ feature 'user registers', %Q{
   end
 
   scenario 'provide invalid registration information' do
-     FactoryGirl.create(:exercise)
+    FactoryGirl.create(:exercise)
     visit new_user_registration_path
 
     click_button 'Sign up'
