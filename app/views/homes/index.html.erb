@@ -18,13 +18,6 @@
     <div class="columns small-4 text-center">
      <h1> Learn the exercises  </h1>
      <%= fa_icon "book 3x" %>
-     <br>
-     <br>
-       <% @exercises.each do |exercise| %>
-       <ul>
-         <li><%= link_to exercise.name, exercise_path(exercise) %></li>
-       </ul>
-     <% end %>
     </div>
 
     <div class="columns small-4 text-center">
