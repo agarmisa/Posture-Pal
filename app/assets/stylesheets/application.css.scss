@@ -20,7 +20,7 @@
 
 .left-text {
   text-align: left;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', sans-serif;
   padding-left: 50px;
   padding-top: 50px;
 }
@@ -68,23 +68,23 @@
 }
 
 body {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', sans-serif;
  }
 
  h2{
-    font-family: 'Poiret One', cursive;
+    font-family: 'Poiret One', sans-serif;
     padding: 20px;
  }
 
  h4{
-   font-family: 'Poiret One', cursive;
+   font-family: 'Poiret One', sans-serif;
    padding: 20px;
    padding-left: 30px;
  }
 
  ul {
   list-style-type: none;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', sans-serif;
 }
 
 .field {
@@ -123,4 +123,8 @@ body {
 
 .exercise {
   padding-top: 200px;
+}
+
+.big-text {
+  font-size: 3rem;
 }
