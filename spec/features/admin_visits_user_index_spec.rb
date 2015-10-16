@@ -14,6 +14,7 @@ feature 'admin visits users index', %{
   scenario 'admin visits users index' do
     user1 = FactoryGirl.create(:user, role: 'admin')
     user2 = FactoryGirl.create(:user)
+    FactoryGirl.create(:exercise)
     sign_in(user1)
     visit users_path
 
@@ -24,11 +25,14 @@ feature 'admin visits users index', %{
 
   scenario 'member fails to visit users index' do
     user = FactoryGirl.create(:user)
+    FactoryGirl.create(:exercise)
+
     sign_in(user)
     expect { visit users_path }.to raise_error(ActionController::RoutingError)
   end
 
   scenario 'admin deletes user' do
+    FactoryGirl.create(:exercise)
     user1 = FactoryGirl.create(:user)
     user2 = FactoryGirl.create(:user, role: 'admin')
 
