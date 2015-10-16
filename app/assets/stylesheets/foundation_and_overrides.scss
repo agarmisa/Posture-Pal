@@ -106,7 +106,7 @@ $white       : #ffffff;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
-// $aluminum    : #999999;
+$aluminum    : #999999;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
@@ -274,6 +274,7 @@ $oil         : #333333;
 // $anchor-font-color: $primary-color;
 $anchor-font-color: $oil;
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+$anchor-font-color-hover: $aluminum;
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -1415,7 +1416,7 @@ $topbar-height: rem-calc(50);
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: rem-calc(18);
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: $white;
@@ -1424,7 +1425,7 @@ $topbar-link-color: $oil;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: $white;
 // $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+$topbar-link-font-size: rem-calc(15);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-hover: $jet;
