@@ -7,7 +7,7 @@ $('.checkin').on('click', function(event) {
     url: url,
     dataType: 'json',
     success: function(response) {
-      checkinTotal.text(response);
+      checkinTotal.text(response + " days total" );
     }
   });
 });

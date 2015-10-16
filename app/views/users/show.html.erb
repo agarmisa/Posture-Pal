@@ -7,8 +7,9 @@
         <h3><%= link_to 'Yes, I kicked booty', user_checkins_path(@user), class: 'checkin' %>
         <span class= 'checkin-total'>
           <% @user.checkins.each do |checkin| %>
-            <%= checkin.count %> days total
+            <%= checkin.count %>
           <% end %>
+          days total
         </span></h3>
       <% end %>
     </div>
