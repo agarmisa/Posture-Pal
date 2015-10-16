@@ -13,7 +13,7 @@ feature 'user registers', %Q{
   #   an error message
 
   scenario 'provide valid registration information' do
-    exercise = FactoryGirl.create(:exercise)
+    FactoryGirl.create(:exercise)
     visit new_user_registration_path
 
     fill_in 'Email', with: 'john@example.com'
@@ -27,7 +27,7 @@ feature 'user registers', %Q{
   end
 
   scenario 'provide invalid registration information' do
-    exercise = FactoryGirl.create(:exercise)
+     FactoryGirl.create(:exercise)
     visit new_user_registration_path
 
     click_button 'Sign up'

@@ -8,7 +8,7 @@ So that it takes less time to sign up
 
   context 'New user signs in with facebook' do
     scenario 'User successfully logs in with facebook' do
-      exercise = FactoryGirl.create(:exercise)
+      FactoryGirl.create(:exercise)
       mock_facebook_auth!
       visit root_path
       click_on 'Sign In with Facebook'

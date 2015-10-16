@@ -12,7 +12,7 @@ feature 'user sees information about herself', %{
   context 'user views personal information' do
     scenario 'user is able to see all personal information' do
       user = FactoryGirl.create(:user)
-      exercise = FactoryGirl.create(:exercise)
+      FactoryGirl.create(:exercise)
       sign_in(user)
 
       visit user_path(user)
