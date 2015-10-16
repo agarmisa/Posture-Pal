@@ -28,7 +28,7 @@ feature 'user signs out', %Q{
   end
 
   scenario 'unauthenticated user attempts to sign out' do
-    exercise = FactoryGirl.create(:exercise)
+    FactoryGirl.create(:exercise)
     visit '/'
     expect(page).to_not have_content('Sign Out')
   end
