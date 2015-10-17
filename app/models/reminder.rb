@@ -8,7 +8,7 @@ class Reminder < ActiveRecord::Base
     reminder = "Hi #{self.user.name}. Time to exercise! #{exercise.name} https://posture-pal.herokuapp.com/exercises/#{exercise.id}"
     message = @client.account.messages.create(
       from: @twilio_number,
-      to: self.user.phone,
+      to: user.phone,
       body: reminder,
     )
     puts message.to
