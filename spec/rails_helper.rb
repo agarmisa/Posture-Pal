@@ -12,6 +12,7 @@ require File.join(File.dirname(__FILE__), 'support/omni_auth_test_helper')
 require File.join(File.dirname(__FILE__), 'support/authentication_helper')
 require 'capybara/rspec'
 require 'capybara/poltergeist'
+require 'database_cleaner'
 
 ActiveRecord::Migration.maintain_test_schema!
 
