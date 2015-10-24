@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.1"
+# ruby "2.2.1"
 
 gem 'rails', '4.2.4'
 gem 'pg'
@@ -26,6 +26,7 @@ end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'poltergeist'
 end
 
 group :development do
