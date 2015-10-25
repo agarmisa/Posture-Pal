@@ -9,15 +9,13 @@ feature 'user sees information about herself', %{
   # - User must see her personal information
   # - User must be able to log her performance
 
-  context 'user views personal information' do
-    scenario 'user is able to see all personal information' do
-      user = FactoryGirl.create(:user)
-      FactoryGirl.create(:exercise)
-      sign_in(user)
+  scenario 'user is able to see all personal information' do
+    user = FactoryGirl.create(:user)
+    FactoryGirl.create(:exercise)
+    sign_in(user)
 
-      visit user_path(user)
-      expect(page).to have_content('keep it up!')
-    end
+    visit user_path(user)
+    expect(page).to have_content('keep it up!')
   end
 
     scenario 'logged-in user is able to see all topbar links' do

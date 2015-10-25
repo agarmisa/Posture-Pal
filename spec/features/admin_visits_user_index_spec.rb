@@ -50,7 +50,6 @@ feature 'admin visits users index', %{
 
   scenario 'admin is able to see all topbar links' do
     FactoryGirl.create(:exercise)
-    user1 = FactoryGirl.create(:user)
     user2 = FactoryGirl.create(:user, role: 'admin')
 
     sign_in(user2)
