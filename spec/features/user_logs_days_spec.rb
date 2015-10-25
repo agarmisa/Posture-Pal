@@ -7,7 +7,7 @@ feature 'user logs days she exercised on the user show page', %{
 } do
 
   # Acceptance Criteria:
-  #User must see the running total of the numbers of days that she has performed her exercises
+  # User must see the running total of the numbers of days that she has performed her exercises
 
   scenario 'user increments the number of days she has exercised', js: true do
     user = FactoryGirl.create(:user)
