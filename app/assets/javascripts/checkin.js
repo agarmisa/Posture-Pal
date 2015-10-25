@@ -8,6 +8,7 @@ $('.checkin').on('click', function(event) {
     dataType: 'json',
     success: function(response) {
       checkinTotal.text(response + " days total" );
+      alert("Awesome Job!!" );
     }
   });
 });
