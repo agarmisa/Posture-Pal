@@ -47,4 +47,15 @@ feature 'admin visits users index', %{
 
     expect(page).to_not have_content(user1.email)
   end
+
+  scenario 'admin is able to see all topbar links' do
+    FactoryGirl.create(:exercise)
+    user2 = FactoryGirl.create(:user, role: 'admin')
+
+    sign_in(user2)
+    visit users_path
+    expect(page).to have_content('Scapular Retractions')
+    expect(page).to have_content('My Page')
+    expect(page).to have_content('Sign Out')
+  end
 end

@@ -4,10 +4,12 @@ class UsersController < ApplicationController
   def index
     @admins = User.where(role: "admin")
     @members = User.where(role: "member")
+    @exercises = Exercise.all
   end
 
   def show
     @user = User.find(params[:id])
+    @exercises = Exercise.all
   end
 
   def edit
