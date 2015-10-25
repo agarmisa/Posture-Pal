@@ -20,7 +20,7 @@ feature 'user sees information about herself', %{
     end
   end
 
-    scenario 'logged-in user is able to see all exercise links' do
+    scenario 'logged-in user is able to see all topbar links' do
       FactoryGirl.create(:exercise)
       user = FactoryGirl.create(:user)
       sign_in(user)
