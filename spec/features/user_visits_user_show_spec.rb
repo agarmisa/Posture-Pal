@@ -18,14 +18,14 @@ feature 'user sees information about herself', %{
     expect(page).to have_content('keep it up!')
   end
 
-    scenario 'logged-in user is able to see all topbar links' do
-      FactoryGirl.create(:exercise)
-      user = FactoryGirl.create(:user)
-      sign_in(user)
+  scenario 'logged-in user is able to see all topbar links' do
+    FactoryGirl.create(:exercise)
+    user = FactoryGirl.create(:user)
+    sign_in(user)
 
-      visit user_path(user)
-      expect(page).to have_content('Scapular Retractions')
-      expect(page).to have_content('My Page')
-      expect(page).to have_content('Sign Out')
-    end
+    visit user_path(user)
+    expect(page).to have_content('Scapular Retractions')
+    expect(page).to have_content('My Page')
+    expect(page).to have_content('Sign Out')
+  end
 end
